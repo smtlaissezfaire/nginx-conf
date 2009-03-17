@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+NGINX = "/opt/local/sbin/nginx"
+NGINX_CONF = "#{File.dirname(__FILE__)}/../nginx.conf"
+
+`sudo #{NGINX} -c #{NGINX_CONF}`
