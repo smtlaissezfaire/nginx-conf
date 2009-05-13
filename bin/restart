@@ -1,9 +1,0 @@
-#!/bin/bash
-
-function process_id {
-  ps aux | grep '^root.*nginx: master process' | head -n 1 | cut -c 8-16
-}
-
-echo "restarting process id: $(process_id)" 
-
-sudo kill -s HUP `process_id`
